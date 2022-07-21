@@ -22,7 +22,6 @@ namespace HFRM_SALARY_CALCULATOR
         }
         private void btnOpen_Click(object sender, EventArgs e)
         {
-            System.Data.DataTable dt = null;
             ofd.Multiselect = false;
             ofd.Title = "Choose an excel file";
             ofd.InitialDirectory = @"C:\";
