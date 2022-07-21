@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Spire.Xls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,7 @@ namespace HFRM_SALARY_CALCULATOR
         }
         private void btnOpen_Click(object sender, EventArgs e)
         {
+            System.Data.DataTable dt = null;
             ofd.Multiselect = false;
             ofd.Title = "Choose an excel file";
             ofd.InitialDirectory = @"C:\";
@@ -30,23 +32,35 @@ namespace HFRM_SALARY_CALCULATOR
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 fileName = ofd.FileName;
-                OleDbConnection connection = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + fileName + ";Extended Properties='Excel 12.0;'");
-                DataTable dt = new DataTable();
-                connection.Open();
-                dt = connection.GetOleDbSchemaTable(OleDbSchemaGuid.Tables, null);
-                String[] excelSheets = new string[dt.Rows.Count];
-                int i = 0;
-                foreach(DataRow row in dt.Rows)
-                {
-                    excelSheets[i] = row["TABLE_NAME"].ToString();
-                    i++;
-                }
-                OleDbDataAdapter adapter = new OleDbDataAdapter("select * from " + excelSheets[0], connection);
-                DataSet ds = new DataSet();
-                adapter.Fill(ds);
-                dataGridView1.DataSource = ds.Tables[0];
-                connection.Close();
+                //create a workbook
+                Workbook workbook = new Workbook();
+                //load from ofd result and import the data
+                workbook.LoadFromFile(fileName);
+                //initialize the worksheet
+                Worksheet worksheet = workbook.Worksheets[0];
+                //display the data
+                dataGridView1.DataSource = worksheet.ExportDataTable();
             }
+        }
+
+        private void btnCalculate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnImage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
