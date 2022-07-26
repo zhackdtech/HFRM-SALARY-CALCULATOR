@@ -109,5 +109,15 @@ namespace HFRM_SALARY_CALCULATOR.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap minimize_window_32px {
+            get {
+                object obj = ResourceManager.GetObject("minimize_window_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainFormElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlTitleBar = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,12 +42,12 @@
             this.btnCalculate = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnOpen = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnExport = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnImage = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnlTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnImage)).BeginInit();
             this.SuspendLayout();
             // 
             // mainFormElipse
@@ -58,7 +58,7 @@
             // pnlTitleBar
             // 
             this.pnlTitleBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(122)))), ((int)(((byte)(235)))));
-            this.pnlTitleBar.Controls.Add(this.btnImage);
+            this.pnlTitleBar.Controls.Add(this.btnMinimize);
             this.pnlTitleBar.Controls.Add(this.btnExit);
             this.pnlTitleBar.Controls.Add(this.label1);
             this.pnlTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
@@ -80,21 +80,21 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
             this.dataGridView1.DoubleBuffered = true;
@@ -238,6 +238,19 @@
             this.btnExport.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Image = global::HFRM_SALARY_CALCULATOR.Properties.Resources.minimize_window_32px;
+            this.btnMinimize.ImageActive = null;
+            this.btnMinimize.Location = new System.Drawing.Point(810, 27);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(32, 32);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinimize.TabIndex = 4;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Zoom = 10;
+            this.btnMinimize.Click += new System.EventHandler(this.btnImage_Click);
+            // 
             // btnExit
             // 
             this.btnExit.Image = global::HFRM_SALARY_CALCULATOR.Properties.Resources.close_window_32px;
@@ -250,19 +263,6 @@
             this.btnExit.TabStop = false;
             this.btnExit.Zoom = 10;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnImage
-            // 
-            this.btnImage.Image = global::HFRM_SALARY_CALCULATOR.Properties.Resources.close_window_32px;
-            this.btnImage.ImageActive = null;
-            this.btnImage.Location = new System.Drawing.Point(810, 27);
-            this.btnImage.Name = "btnImage";
-            this.btnImage.Size = new System.Drawing.Size(32, 32);
-            this.btnImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnImage.TabIndex = 4;
-            this.btnImage.TabStop = false;
-            this.btnImage.Zoom = 10;
-            this.btnImage.Click += new System.EventHandler(this.btnImage_Click);
             // 
             // Form1
             // 
@@ -281,8 +281,8 @@
             this.pnlTitleBar.ResumeLayout(false);
             this.pnlTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnImage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -301,7 +301,7 @@
         private Bunifu.Framework.UI.BunifuElipse btnCalculateElipse;
         private Bunifu.Framework.UI.BunifuFlatButton btnCalculate;
         private Bunifu.Framework.UI.BunifuImageButton btnExit;
-        private Bunifu.Framework.UI.BunifuImageButton btnImage;
+        private Bunifu.Framework.UI.BunifuImageButton btnMinimize;
     }
 }
 
