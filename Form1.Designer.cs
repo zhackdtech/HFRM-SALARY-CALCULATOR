@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mainFormElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlTitleBar = new System.Windows.Forms.Panel();
+            this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.daraGridViewElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnExportElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btnExport = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnOpenElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.btnOpen = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCalculateElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnCalculate = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnOpen = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnExport = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnMinimize = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
             this.pnlTitleBar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainFormElipse
@@ -67,6 +67,32 @@
             this.pnlTitleBar.Size = new System.Drawing.Size(892, 75);
             this.pnlTitleBar.TabIndex = 0;
             // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Image = global::HFRM_SALARY_CALCULATOR.Properties.Resources.minimize_window_32px;
+            this.btnMinimize.ImageActive = null;
+            this.btnMinimize.Location = new System.Drawing.Point(810, 27);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(32, 32);
+            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinimize.TabIndex = 4;
+            this.btnMinimize.TabStop = false;
+            this.btnMinimize.Zoom = 10;
+            this.btnMinimize.Click += new System.EventHandler(this.btnImage_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Image = global::HFRM_SALARY_CALCULATOR.Properties.Resources.close_window_32px;
+            this.btnExit.ImageActive = null;
+            this.btnExit.Location = new System.Drawing.Point(848, 27);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(32, 32);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnExit.TabIndex = 4;
+            this.btnExit.TabStop = false;
+            this.btnExit.Zoom = 10;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -80,21 +106,21 @@
             // 
             // dataGridView1
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.ColumnHeadersVisible = false;
             this.dataGridView1.DoubleBuffered = true;
@@ -116,90 +142,6 @@
             // 
             this.btnExportElipse.ElipseRadius = 15;
             this.btnExportElipse.TargetControl = this.btnExport;
-            // 
-            // btnOpenElipse
-            // 
-            this.btnOpenElipse.ElipseRadius = 15;
-            this.btnOpenElipse.TargetControl = this.btnOpen;
-            // 
-            // btnCalculateElipse
-            // 
-            this.btnCalculateElipse.ElipseRadius = 15;
-            this.btnCalculateElipse.TargetControl = this.btnCalculate;
-            // 
-            // btnCalculate
-            // 
-            this.btnCalculate.Active = false;
-            this.btnCalculate.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(122)))), ((int)(((byte)(235)))));
-            this.btnCalculate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(122)))), ((int)(((byte)(235)))));
-            this.btnCalculate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCalculate.BorderRadius = 0;
-            this.btnCalculate.ButtonText = "export";
-            this.btnCalculate.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCalculate.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCalculate.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculate.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCalculate.Iconimage = global::HFRM_SALARY_CALCULATOR.Properties.Resources.microsoft_excel_24px;
-            this.btnCalculate.Iconimage_right = null;
-            this.btnCalculate.Iconimage_right_Selected = null;
-            this.btnCalculate.Iconimage_Selected = null;
-            this.btnCalculate.IconMarginLeft = 0;
-            this.btnCalculate.IconMarginRight = 0;
-            this.btnCalculate.IconRightVisible = true;
-            this.btnCalculate.IconRightZoom = 0D;
-            this.btnCalculate.IconVisible = true;
-            this.btnCalculate.IconZoom = 48D;
-            this.btnCalculate.IsTab = false;
-            this.btnCalculate.Location = new System.Drawing.Point(590, 417);
-            this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(122)))), ((int)(((byte)(235)))));
-            this.btnCalculate.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(102)))), ((int)(((byte)(237)))));
-            this.btnCalculate.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnCalculate.selected = false;
-            this.btnCalculate.Size = new System.Drawing.Size(296, 48);
-            this.btnCalculate.TabIndex = 3;
-            this.btnCalculate.Text = "export";
-            this.btnCalculate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCalculate.Textcolor = System.Drawing.Color.White;
-            this.btnCalculate.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.Active = false;
-            this.btnOpen.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(122)))), ((int)(((byte)(235)))));
-            this.btnOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(122)))), ((int)(((byte)(235)))));
-            this.btnOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnOpen.BorderRadius = 0;
-            this.btnOpen.ButtonText = "open";
-            this.btnOpen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnOpen.DisabledColor = System.Drawing.Color.Gray;
-            this.btnOpen.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpen.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnOpen.Iconimage = global::HFRM_SALARY_CALCULATOR.Properties.Resources.add_file_24px;
-            this.btnOpen.Iconimage_right = null;
-            this.btnOpen.Iconimage_right_Selected = null;
-            this.btnOpen.Iconimage_Selected = null;
-            this.btnOpen.IconMarginLeft = 0;
-            this.btnOpen.IconMarginRight = 0;
-            this.btnOpen.IconRightVisible = true;
-            this.btnOpen.IconRightZoom = 0D;
-            this.btnOpen.IconVisible = true;
-            this.btnOpen.IconZoom = 48D;
-            this.btnOpen.IsTab = false;
-            this.btnOpen.Location = new System.Drawing.Point(590, 471);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(122)))), ((int)(((byte)(235)))));
-            this.btnOpen.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(102)))), ((int)(((byte)(237)))));
-            this.btnOpen.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnOpen.selected = false;
-            this.btnOpen.Size = new System.Drawing.Size(145, 48);
-            this.btnOpen.TabIndex = 1;
-            this.btnOpen.Text = "open";
-            this.btnOpen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOpen.Textcolor = System.Drawing.Color.White;
-            this.btnOpen.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // btnExport
             // 
@@ -238,31 +180,89 @@
             this.btnExport.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
             // 
-            // btnMinimize
+            // btnOpenElipse
             // 
-            this.btnMinimize.Image = global::HFRM_SALARY_CALCULATOR.Properties.Resources.minimize_window_32px;
-            this.btnMinimize.ImageActive = null;
-            this.btnMinimize.Location = new System.Drawing.Point(810, 27);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(32, 32);
-            this.btnMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMinimize.TabIndex = 4;
-            this.btnMinimize.TabStop = false;
-            this.btnMinimize.Zoom = 10;
-            this.btnMinimize.Click += new System.EventHandler(this.btnImage_Click);
+            this.btnOpenElipse.ElipseRadius = 15;
+            this.btnOpenElipse.TargetControl = this.btnOpen;
             // 
-            // btnExit
+            // btnOpen
             // 
-            this.btnExit.Image = global::HFRM_SALARY_CALCULATOR.Properties.Resources.close_window_32px;
-            this.btnExit.ImageActive = null;
-            this.btnExit.Location = new System.Drawing.Point(848, 27);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(32, 32);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnExit.TabIndex = 4;
-            this.btnExit.TabStop = false;
-            this.btnExit.Zoom = 10;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnOpen.Active = false;
+            this.btnOpen.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(122)))), ((int)(((byte)(235)))));
+            this.btnOpen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(122)))), ((int)(((byte)(235)))));
+            this.btnOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOpen.BorderRadius = 0;
+            this.btnOpen.ButtonText = "open";
+            this.btnOpen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnOpen.DisabledColor = System.Drawing.Color.Gray;
+            this.btnOpen.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpen.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnOpen.Iconimage = global::HFRM_SALARY_CALCULATOR.Properties.Resources.add_file_24px;
+            this.btnOpen.Iconimage_right = null;
+            this.btnOpen.Iconimage_right_Selected = null;
+            this.btnOpen.Iconimage_Selected = null;
+            this.btnOpen.IconMarginLeft = 0;
+            this.btnOpen.IconMarginRight = 0;
+            this.btnOpen.IconRightVisible = true;
+            this.btnOpen.IconRightZoom = 0D;
+            this.btnOpen.IconVisible = true;
+            this.btnOpen.IconZoom = 48D;
+            this.btnOpen.IsTab = false;
+            this.btnOpen.Location = new System.Drawing.Point(590, 471);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(122)))), ((int)(((byte)(235)))));
+            this.btnOpen.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(102)))), ((int)(((byte)(237)))));
+            this.btnOpen.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnOpen.selected = false;
+            this.btnOpen.Size = new System.Drawing.Size(145, 48);
+            this.btnOpen.TabIndex = 1;
+            this.btnOpen.Text = "open";
+            this.btnOpen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOpen.Textcolor = System.Drawing.Color.White;
+            this.btnOpen.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            // 
+            // btnCalculateElipse
+            // 
+            this.btnCalculateElipse.ElipseRadius = 15;
+            this.btnCalculateElipse.TargetControl = this.btnCalculate;
+            // 
+            // btnCalculate
+            // 
+            this.btnCalculate.Active = false;
+            this.btnCalculate.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(122)))), ((int)(((byte)(235)))));
+            this.btnCalculate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(122)))), ((int)(((byte)(235)))));
+            this.btnCalculate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCalculate.BorderRadius = 0;
+            this.btnCalculate.ButtonText = "calculate";
+            this.btnCalculate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCalculate.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCalculate.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculate.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCalculate.Iconimage = global::HFRM_SALARY_CALCULATOR.Properties.Resources.calculator_24px;
+            this.btnCalculate.Iconimage_right = null;
+            this.btnCalculate.Iconimage_right_Selected = null;
+            this.btnCalculate.Iconimage_Selected = null;
+            this.btnCalculate.IconMarginLeft = 0;
+            this.btnCalculate.IconMarginRight = 0;
+            this.btnCalculate.IconRightVisible = true;
+            this.btnCalculate.IconRightZoom = 0D;
+            this.btnCalculate.IconVisible = true;
+            this.btnCalculate.IconZoom = 48D;
+            this.btnCalculate.IsTab = false;
+            this.btnCalculate.Location = new System.Drawing.Point(590, 417);
+            this.btnCalculate.Name = "btnCalculate";
+            this.btnCalculate.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(122)))), ((int)(((byte)(235)))));
+            this.btnCalculate.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(102)))), ((int)(((byte)(237)))));
+            this.btnCalculate.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCalculate.selected = false;
+            this.btnCalculate.Size = new System.Drawing.Size(296, 48);
+            this.btnCalculate.TabIndex = 3;
+            this.btnCalculate.Text = "calculate";
+            this.btnCalculate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCalculate.Textcolor = System.Drawing.Color.White;
+            this.btnCalculate.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
             // Form1
             // 
@@ -280,9 +280,9 @@
             this.Text = "Form1";
             this.pnlTitleBar.ResumeLayout(false);
             this.pnlTitleBar.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
