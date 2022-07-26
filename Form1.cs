@@ -40,6 +40,7 @@ namespace HFRM_SALARY_CALCULATOR
                 //display the data
                 dataGridView1.DataSource = worksheet.ExportDataTable();
             }
+            MessageBox.Show("");
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
